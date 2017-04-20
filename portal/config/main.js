@@ -2,11 +2,11 @@
 module.exports = {
     'port': 8080,
     'database':{
-        'host':'mysql-test.cg5aommepg3x.ap-south-1.rds.amazonaws.com',
+        'host':'yaminidbinstance.cnycted9lsbz.us-west-2.rds.amazonaws.com',
         'port':'3306',
         'username':'root',
-        'password':'mrnd1234',
-        'databaseName': 'MrndHiringPortal'
+        'password':'root1234',
+        'databaseName': 'vizagSchool'
     },
-    'secret':'(#^*!(&^%$&*^@(&($&%@#)#^*$'
+	'secret':'(#^*!(&^%$&*^@(&($&%@#)#^*$'
 };
