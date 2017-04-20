@@ -7,6 +7,5 @@ module.exports = {
         'username':'root',
         'password':'root1234',
         'databaseName': 'vizagSchool'
-    },
-	'secret':'(#^*!(&^%$&*^@(&($&%@#)#^*$'
+    }
 };

@@ -23,7 +23,7 @@ db.getAllStudents = function(successCallback, failureCallback){
 
 db.getStudent = function (id,successCallback, failureCallback) {
     var student={};
-    id = parseInt(id, 10);
+    //id = parseInt(id, 10);
     connection.query(queries.getStudent(id),function (err,rows,fields,res) {
         if(err){
             failureCallback(err);
@@ -35,14 +35,6 @@ db.getStudent = function (id,successCallback, failureCallback) {
             failureCallback('Could not retrieve student data');
         }
     });
-    connection.query(queries.getStudentProjects(id),function (err,rows,fields,res) {
-        if(err){
-            failureCallback(err);
-            return;
-        }
-        student[0].projects = rows;
-        successCallback(student);
-    })
 }
 
 module.exports = db;
