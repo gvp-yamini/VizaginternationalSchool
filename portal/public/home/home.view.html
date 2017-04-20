@@ -1,0 +1,99 @@
+﻿      <div class="dashboard-menu">
+       <div class="left-menu">
+                <div class="left-menu-inner">
+                    <div class="left-menu-item active">
+                        Freshers
+                    </div>
+                    <div class="left-menu-item">
+                        Experienced
+                    </div>
+                    <div class="left-menu-item">
+                        Notice Period &lt; 3 months
+                    </div>
+                </div>
+       </div>
+       <div class="center-menu">
+       	<div class="container-fluid search-box">
+                    <div class="search-bar">
+                        <form class="search-form">
+                            <input type="text" class="search-input" ng-model="search" class="form-control" placeholder="Search"/>
+                            <div class="search-icon"></div>
+
+                        </form>
+                        
+                        
+                    </div>
+                    
+                    <button type="submit" ng-disabled="!vm.isSelected" class="round-button skyblue" data-toggle="modal" data-target="#myModal">SEND INVITES</button>
+			    <button type="submit" ng-disabled="!vm.isSelected" class="round-button salmon" ng-click="vm.create_zip()">DOWNLOAD RESUMES</button>
+
+                </div>
+
+               <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">
+          	<input id="subject" type="text" ng-model="vm.subject" placeholder="Write Subject" />
+          </h4>
+        </div>
+        <div class="modal-body">
+          <textarea id="content" cols="40" rows="5"  ng-model="vm.msgBody" placeholder="Write what you want to send"></textarea>
+        </div>
+        <div class="modal-footer">
+          <button type="button" ng-disabled="!vm.msgBody" class="btn btn-primary" data-dismiss="modal" ng-click="vm.sendInvite()">Send</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      </div>
+      </div>
+	  		    <div class="bs-component">		
+				<table class="table table-striped table-hover">
+					<thead>
+						<tr>
+						    <th><input type="checkbox" ng-click="vm.CheckAllCheckBoxes()" ng-mode="vm.checkedFlag"></th>
+							<th ng-click="vm.sort('name')">Name
+								<span class="glyphicon sort-icon" ng-show="vm.sortKey=='name'" ng-class="{'glyphicon-chevron-up':vm.reverse,'glyphicon-chevron-down':!vm.reverse}"></span>
+							</th>
+							<th ng-click="vm.sort('college')">College
+								<span class="glyphicon sort-icon" ng-show="vm.sortKey=='college'" ng-class="{'glyphicon-chevron-up':vm.reverse,'glyphicon-chevron-down':!vm.reverse}"></span>
+							</th>
+							<th ng-click="vm.sort('skills')">Skills
+								<span class="glyphicon sort-icon" ng-show="vm.sortKey=='skills'" ng-class="{'glyphicon-chevron-up':vm.reverse,'glyphicon-chevron-down':!vm.reverse}"></span>
+							</th>
+							<th ng-click="vm.sort('experience')">Experience
+								<span class="glyphicon sort-icon" ng-show="vm.sortKey=='experience'" ng-class="{'glyphicon-chevron-up':vm.reverse,'glyphicon-chevron-down':!vm.reverse}"></span>
+							</th>
+							<th></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr dir-paginate="student in vm.searchResults = (vm.allStudents|orderBy:vm.sortKey:vm.reverse|filter:search)|itemsPerPage:7" ng-click="vm.navigateToDetails(student.id)">
+						    <td><input type="checkbox" ng-click="vm.selectingIndividualstudents($event,student)" ng-model="student.checked"></td>
+							<td>{{student.name}}</td>
+							<td>{{student.college}}</td>
+							<td>{{student.skills}}</td>
+							<td>{{student.experience}}</td>
+							<td><i class="fa fa-chevron-right" aria-hidden="true"></i></td>
+						</tr>
+					</tbody>
+				</table>
+				<p ng-hide="vm.searchResults.length">No records to view</p>
+				<div class="col s12 m4 l6">
+				<dir-pagination-controls
+					max-size="5"
+					direction-links="true"
+					boundary-links="true" >
+				</dir-pagination-controls>
+				</div>
+			</div>
+		</div>
+		<div class="right-menu"></div>
+			</div>
+			<script src="app.js"></script>
+			<script src="lib/jszip.js"></script>
+            <script src="lib/FileSaver.js"></script>
+            <script src="lib/jszip-utils.min.js"></script>

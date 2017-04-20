@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <meta charset="utf-8" />
+    <title>MissionRnD</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" />
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,900,300italic,400italic" rel="stylesheet" type="text/css">
+    <link href="css/hamburgers.css" type="text/css" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="css/style.css" type="text/css" rel="stylesheet" >
+    <script src="js/script.js"></script>
+    <link href="app-content/app.css" rel="stylesheet" />
+</head>
+<body>
+    <div ng-controller="HeaderCtrl">
+	  <div ng-include="templateUrl"></div>
+	</div>
+            <div class="col-sm-12">
+                <div ng-class="{ 'alert': flash, 'alert-success': flash.type === 'success', 'alert-danger': flash.type === 'error' }" ng-if="flash" ng-bind="flash.message"></div>
+                <div ng-view></div>
+            </div>
+    <div ng-controller="footerCtrl">
+      <div ng-include="templateUrl"></div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="//code.angularjs.org/1.6.0/angular.min.js"></script>
+    <script src="//code.angularjs.org/1.6.0/angular-route.min.js"></script>
+    <script src="//code.angularjs.org/1.6.0/angular-cookies.min.js"></script>
+
+    <script src="app.js"></script>
+    <script src="app-services/authentication.service.js"></script>
+    <script src="app-services/flash.service.js"></script>
+    <script src="lib/dirPagination.js"></script>
+    <script src="lib/jszip.js"></script>
+    <script src="lib/FileSaver.js"></script>
+    <script src="lib/jszip-utils.min.js"></script>
+    <script src="app-services/user.service.local-storage.js"></script>
+    <script src="app-services/students.service.js"></script>
+    <script src="app-services/mail.service.js"></script>
+    <script src="home/home.controller.js"></script>
+    <script src="login/login.controller.js"></script>
+    <script src="register/register.controller.js"></script>
+    <script src="studentDetails/studentdetails.controller.js"></script>
+</body>
+
+</html>

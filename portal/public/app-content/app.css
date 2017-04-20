@@ -1,0 +1,218 @@
+﻿.carousel{
+  width: 700px;
+}
+.carousel .left > i,
+.carousel .right > i {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.carousel .right > i {
+  left: auto;
+  right: 20px;
+}
+.carousel-caption
+      {
+	 top: 40px;
+     bottom: auto;
+	 right: 40px;
+     text-align:left;
+	 margin-left: 85px;
+    }
+.panel1       {
+top: 60px; 
+float:left;
+left: 10px;
+height: 200px;
+}
+.panel2       { 
+top: 60px;
+left: 160px;
+ overflow:hidden;
+}
+.dropdown , .dropdown > a{
+text-decoration:none;
+padding:5px 21px;
+background: transparent;
+color:#eee;
+float:left;
+text-align:center;
+}
+.nav .open>a, .nav .open>a:hover, .nav .open>a:focus {
+    background-color: #1a82f7;
+    border-color: #428bca;
+}
+.nav>li>a:hover, .nav>li>a:focus {
+    text-decoration: none;
+    background-color: #1a82f7;
+}
+
+a {
+    cursor: pointer;
+}
+.navbar-custom {
+    	 /* fallback */
+  background-color: #1a82f7;
+  background-repeat: repeat-y;
+
+  /* Safari 4-5, Chrome 1-9 */
+  background: -webkit-gradient(linear, left top, right top, from(#1a82f7), to(#2F2727));
+
+  /* Safari 5.1, Chrome 10+ */
+  background: -webkit-linear-gradient(left, #2F2727, #1a82f7);
+
+  /* Firefox 3.6+ */
+  background: -moz-linear-gradient(left, #2F2727, #1a82f7);
+
+  /* IE 10 */
+  background: -ms-linear-gradient(left, #2F2727, #1a82f7);
+
+  /* Opera 11.10+ */
+  background: -o-linear-gradient(left, #2F2727, #1a82f7);
+  
+    color:#ffffff;
+    border-radius:0;
+}
+.navbar-login
+{
+    width: 305px;
+    padding: 10px;
+    padding-bottom: 0px;
+}
+
+.navbar-login-session
+{
+    padding: 10px;
+    padding-bottom: 0px;
+    padding-top: 0px;
+}
+.navbar-custom .navbar-nav > li > a {
+    color:#fff;
+}
+.userDetails{
+  color: #30363f
+}
+.navbar-custom .navbar-nav > .active > a, .navbar-nav > .active > a:hover, .navbar-nav > .active > a:focus {
+    color: #1a82f7;
+    background-color:#1a82f7;
+}
+
+.navbar-custom .navbar-brand {
+    color:#eeeeee;
+}
+
+.navbar-brand {
+  padding: 0px;
+}
+.navbar-brand>img {
+  height: 100%;
+  padding: 15px;
+  width: auto;
+}
+.navbar-custom .navbar-brand {
+  height: 80px;
+}
+#Main{
+  margin-top : 40px;
+}
+.icon-size
+{
+    font-size: 87px;
+}
+.form {
+  position: relative;
+  z-index: 1;
+  background: #FFFFFF;
+  max-width: 360px;
+  margin: 0 auto 100px;
+  padding: 45px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+.form input {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+.form button {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: #192980;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+.form button:hover,.form button:active,.form button:focus {
+  background: #192980;
+}
+
+.form .message {
+  margin: 15px 0 0;
+  color: #b3b3b3;
+  font-size: 12px;
+}
+.form .message a {
+  color: #192980;
+  text-decoration: none;
+}
+
+.searchbox{
+    width: 50%;
+  }
+
+.searchContainer{
+  width: 500px;
+  vertical-align: middle;
+  white-space: nowrap;
+  position: relative;
+}
+
+.searchContainer input#search{
+    width: 500px;
+    height: 50px;
+    background: #2b303b;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url('searchicon.png');
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+.searchContainer input#search::-webkit-input-placeholder {
+   color: #65737e;
+}
+ 
+.searchContainer input#search:-moz-placeholder { /* Firefox 18- */
+   color: #65737e;  
+}
+ 
+.searchContainer input#search::-moz-placeholder {  /* Firefox 19+ */
+   color: #65737e;  
+}
+ 
+.searchContainer input#search:-ms-input-placeholder {  
+   color: #65737e;  
+}
+
+.searchContainer input#search:hover, .searchContainer input#search:focus, .searchContainer input#search:active{
+    outline:none;
+    background: #ffffff;
+  }
