@@ -23,15 +23,19 @@ db.getAllStudents = function(successCallback, failureCallback){
 
 db.getStudent = function (id,successCallback, failureCallback) {
     var student={};
-    //id = parseInt(id, 10);
-    connection.query(queries.getStudent(id),function (err,rows,fields,res) {
+    id = parseInt(id, 10);
+    console.log("inside db"+id);
+     connection.query(queries.getStudent(id),function (err,rows,fields,res) {
         if(err){
+            console.log("error callback");
             failureCallback(err);
             return;
         }
         if(rows.length > 0){
-            student = rows;
+            console.log("row.length-->"+rows.length);
+            successCallback(rows);
         }else{
+            console.log("Could not retrieve student data");
             failureCallback('Could not retrieve student data');
         }
     });

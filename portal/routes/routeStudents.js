@@ -28,14 +28,17 @@ student.post('/', function (req, res) {
 
 student.get('/', function (request, response) {
     var id = request.query.id;
+    console.log("yamini fresh log-->"+ id);
     if(id===undefined || id===null)
     {
+        console.log("getAllStudents");
         db.getAllStudents(function (res) {
             response.send(res);
         }, function (err) {
             responseManager.setResponse(res, 400, false, messages.GET_STUDENTS_FAILED);
         });
     }else{
+        console.log("getStudent");
         db.getStudent(id,function(res){
             response.send(res);
         },function(err){

@@ -11,12 +11,12 @@
     config.$inject = ['$routeProvider', '$locationProvider'];
     function config($routeProvider,$httpProvider,$locationProvider) {
         $routeProvider
-            .when('/login', {
-                controller: 'LoginController',
-                templateUrl: 'login/login.view.html',
+            .when('/projects', {
+                controller: 'ProjectController',
+                templateUrl: 'projects/project.view.html',
                 controllerAs: 'vm'
             })
-            .otherwise({ redirectTo: '/login' });
+            .otherwise({ redirectTo: '/projects' });
     }
 
     run.$inject = ['$rootScope', '$location', '$cookies', '$http'];
@@ -26,10 +26,10 @@
 
         $rootScope.$on('$locationChangeStart', function (event, next, current) {
             // redirect to login page if not logged in and trying to access a restricted page
-            var restrictedPage = $.inArray($location.path(), ['/login', '/register']) === -1;
+            var restrictedPage = $.inArray($location.path(), ['/projects']) === -1;
             var loggedIn = $rootScope.globals.currentUser;
             if (restrictedPage && !loggedIn) {
-                $location.path('/login');
+                $location.path('/projects');
             }
         });
     }
@@ -39,10 +39,10 @@
           $rootScope.$on('$locationChangeSuccess', function (event, next, current) {
 		          var path = $location.path();
         //EDIT: cope with other path
-		if(path==='/login'){
-			$scope.templateUrl = 'templates/beforeSignInHeader.tmpl.html';
+		if(path==='/projects'){
+            $scope.templateUrl = 'templates/afterSignInHeader.tmpl.html';
 		}else{
-			$scope.templateUrl = 'templates/afterSignInHeader.tmpl.html';
+            $scope.templateUrl = 'templates/beforeSignInHeader.tmpl.html';
 		}
     });
     }
@@ -52,10 +52,10 @@
           $rootScope.$on('$locationChangeSuccess', function (event, next, current) {
                   var path = $location.path();
         //EDIT: cope with other path
-        if(path==='/login'){
-            $scope.templateUrl = 'templates/beforeSignInFooter.tmpl.html';
-        }else{
+        if(path==='/projects'){
             $scope.templateUrl = 'templates/afterSignInFooter.tmpl.html';
+        }else{
+            $scope.templateUrl = 'templates/beforeSignInFooter.tmpl.html';
         }
     });
     }

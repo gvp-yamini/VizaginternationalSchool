@@ -16,7 +16,7 @@ studentQueries.getAllStudents = function(){
 };
 
 studentQueries.getStudent = function (id) {
-    return "SELECT * from students where adminNo=" + id + ";"
+    return "SELECT * from students where id=" + id + ";"
 }
 
 module.exports = studentQueries;

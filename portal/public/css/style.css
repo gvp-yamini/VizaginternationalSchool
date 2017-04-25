@@ -6,7 +6,37 @@ body{
     font-family: Open Sans,open-sans,sans-serif;
 }
 
+header{
+    text-align: center;
+}
 
+.violet{
+    color:#9400D3
+}
+.indigo{
+    color:#4B0082
+}
+.blue{
+    color:#0000FF
+}
+.green{
+    color:#00FF00
+}
+.yellow{
+    color:#FFFF00
+}
+.orange{
+    color:#FF7F00
+}
+.red{
+    color:#FF0000
+}
+.teel{
+    color: #008080;
+}
+.card-text{
+    text-align: left;
+}
 .mrnd-navbar{
     background-color: white;
     height: auto;
@@ -104,15 +134,6 @@ label{
     font-family: inherit;
 }
 
-.signin-box{
-    padding-top: 25px;
-}
-
-
-.signin-form-container>div{
-    padding-top: 15px;
-    padding-bottom: 15px;
-}
 
 .right-division{
     background-color: white;
@@ -172,17 +193,6 @@ label{
     cursor: not-allowed;
 }
 
-.signin-forget-password{
-    color: gold;
-    cursor: pointer;
-}
-
-.register-here{
-    color: gold;
-    margin-top: 100px;
-    cursor: pointer;
-}
-
 
 .mrnd-navbar-logged-user{
     text-align: right;
@@ -198,7 +208,7 @@ label{
 .left-menu{
     float: left;
     left: 0;
-    height: 550px;
+    height: 880px;
     width: 17%;
     border-right: 1px solid lightgrey;
     background-color: white;
@@ -216,7 +226,7 @@ label{
 .right-menu{
     float: right;
     right: 0;
-    height: 550px;
+    height: 880px;
     width: 17%;
     border-right: 1px solid lightgrey;
     background-color: gold;
@@ -329,49 +339,11 @@ label{
     color: gold;
 }
 
-.search-bar{
-    width: 300px;
-    height: 100%;
-    background-color: white;
-    position: relative;
-    border: 1px solid lightgrey;
-    padding: 4px 10px 9px 10px;
-    border-radius: 20px;
-    display: inline-block;
+.search-form{
+    width:500px;
+    margin:50px auto;
 }
 
-.search-input{
-        width: 100%;
-        height :40px;
-    border: 0px;
-    padding-left: 25px;
-    color: grey;
-    margin-top: 12px;
-    padding-top: 5px;
-    font-size: 15px;
-}
-
-.search-input:focus{
-    outline-color: transparent;
-}
-
-
-.search-icon{
-    z-index: 3;
-        position: absolute;
-    bottom: 18px;
-    background-image: url(../images/search.png);
-    width: 15px;
-    height: 15px;
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-.search-box{
-    margin-top: 30px;
-    padding-left: 35px;
-    height: 40px;
-}
 
 .round-button{
     display: inline-block;
@@ -387,6 +359,9 @@ label{
 
 .salmon{
     background: salmon;
+    height: 40px;
+    text-align: center;
+    margin-top: 20px;
 }
 
 .salmon:hover{
@@ -395,148 +370,26 @@ label{
 
 .skyblue{
     background: deepskyblue;
+    height: 40px;
+    text-align: center;
+    margin-top: 20px;
 }
 
 .skyblue:hover{
     background: lightskyblue;
 }
 
-
-.search-input:focus~div{
-    background-image: url("../images/search-hover.png");
+.search-button{
+    position:relative;
+                padding:6px 15px;
+                left:-8px;
+                border:2px solid #207cca;
+                background-color:#207cca;
+                color:#fafafa;
 }
-
-.student-card{
-    width: 280px;
-    height: 160px;
-    background-color: white;
-    border: 1px solid lightgrey;
-    border-radius: 5px;
-    padding: 20px 20px;
-    margin-top: 25px;
-    margin-left: 25px;
-    position: relative;
-    display: none;
-    overflow: hidden;
-}
-
-.student-card-name{
-    font-weight: 100;
-    font-size: 20px;
-    width: 100%;
-    border-bottom: 2px solid salmon;
-    padding-bottom: 5px;
-    margin-bottom: 10px;
-}
-
-.student-card-college{
-    color: grey;
-}
-
-.student-skill{
-    display: inline-block;
-    padding: 10px;
-}
-
-.student-exp>span, .top-skills>span{
-    text-align: left;
-    font-style: italic;
-    color: darkgrey;
-}
-
-
-.top-skills, .student-exp{
-    padding-top: 7px;
-}
-
-
-.student-skill-box{
-    width: 100%;
-    text-align: center;
-}
-
-.student-card-name>span{
-    float: right;
-    background-image: url("../images/tick-inside-a-circle.png");
-    width: 30px;
-    height: 30px;
-    z-index: 10;
-    background-repeat: no-repeat;
-    background-size: contain;
-    cursor: pointer;
-}
-
-
-.student-card-name>span.active{
-    background-image: url("../images/tick-inside-a-circle%20(1).png");
-}
-
-
-.view-profile-container{
-    width: 100%;
-    height: 60%;
-    bottom: 0px;
-    left: 0px;
-    z-index: 1;
-    
-    position: absolute;
-    background: -webkit-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,1)); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(bottom, rgba(0,0,0,0), rgba(0,0,0,1)); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(bottom, rgba(0,0,0,0), rgba(0,0,0,1)); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,1)); /* Standard syntax (must be last) */
-    display: none;
-    text-align: center;
-    
-}
-
-
-
-
-.normal:hover .view-profile-container{
-    display: block;
-}
-
-.view-profile-button{
-    top: 60%;
-    position: absolute;
-    z-index: 30;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 8px 18px;
-    color: white;
-    min-width: 160px;
-    border-radius: 20px;
-    cursor: pointer;
-    border: 2px solid lightgrey;
-}
-
-
-.view-profile-button:hover{
-    background-color: deepskyblue;
-    border: 2px solid deepskyblue;
-}
-
-.student-list-item{
-    width: 90%;
-    height: 50px;
-    background-color: white;
-    border-radius: 5px;
-    padding: 15px;
-    margin-left: 5%;
-    margin-right: 5%;
-}
-
-.student-list-item>div{
-    display: inline-block;
-}
-
-.student-table{
-    margin-left: 2.5%;
-    margin-right: 2.5%;
-    width: 95%;
-    margin-top: 35px;
-    background: white;
-    
+.search-button:hover  {
+                background-color:#fafafa;
+                color:#207cca;
 }
 
 th, td{
@@ -556,16 +409,6 @@ label:hover:before {
   border: 2px solid #4778d9!important;
 }
 
-.signin-box .message {
-  margin: 15px 0 0;
-  color: #b3b3b3;
-  font-size: 12px;
-}
-.signin-box .message a {
-  color: #192980;
-  text-decoration: none;
-}
-
 a { color:black } /* Globally */
 
 /* Each state */
@@ -581,53 +424,6 @@ a:hover, a:active { text-decoration: none; color:gold }
     margin-left: 50px;
 }
 
-/* Image */
-
-	.image {
-		border-radius: 5px;
-		border: 0;
-		display: inline-block;
-		position: relative;
-	}
-
-		.image img {
-			border-radius: 5px;
-			display: block;
-		}
-
-		.image.left {
-			float: left;
-			margin: 0 2.5em 2em 0;
-			top: 0.25em;
-		}
-
-		.image.right {
-			float: right;
-			margin: 0 0 2em 2.5em;
-			top: 0.25em;
-		}
-
-		.image.fit {
-			display: block;
-			margin: 0 0 2.25em 0;
-			width: 100%;
-		}
-
-			.image.fit img {
-				display: block;
-				width: 100%;
-			}
-
-		.image.avatar {
-			border-radius: 100%;
-			overflow: hidden;
-		}
-
-			.image.avatar img {
-				border-radius: 100%;
-				display: block;
-				width: 100%;
-			}
 header p {
         color: #aaa;
         position: relative;
