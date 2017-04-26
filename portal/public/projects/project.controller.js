@@ -20,7 +20,6 @@
             StudentService.GetById(vm.search)
                 .then(function (student) {
                     vm.student = student;
-                    alert(JSON.stringify(student));
                 });
         }
     }

@@ -24,8 +24,9 @@ db.getAllStudents = function(successCallback, failureCallback){
 db.getStudent = function (id,successCallback, failureCallback) {
     var student={};
     id = parseInt(id, 10);
-    console.log("inside db"+id);
-     connection.query(queries.getStudent(id),function (err,rows,fields,res) {
+     console.log("inside db"+id);
+     if(id){
+        connection.query(queries.getStudent(id),function (err,rows,fields,res) {
         if(err){
             console.log("error callback");
             failureCallback(err);
@@ -39,6 +40,10 @@ db.getStudent = function (id,successCallback, failureCallback) {
             failureCallback('Could not retrieve student data');
         }
     });
+     }else{
+          failureCallback('id is null,NaN or Undefined ');
+     }
+    
 }
 
 module.exports = db;

@@ -42,65 +42,65 @@
             <div class="bs-component">
                 <div class= "projectsList">
                     <header class="header">
-                        <h3 class="teel">David Boureau</h3>
+                        <h3 class="teel" ng-show="vm.student[0].NAME">{{vm.student[0].NAME}}</h3>
                         <div class="row">
                             <div class="col-xs-2"></div>
-                            <div class="col-xs-4">CLASS: Nursery</div>
-                            <div class="col-xs-4">GR.NO.: 4025</div>
+                            <div class="col-xs-4" ng-show="vm.student[0].CLASS">CLASS: {{vm.student[0].CLASS}}</div>
+                            <div class="col-xs-4" ng-show="vm.student[0].id">GR.NO.: {{vm.student[0].id}}</div>
                         </div></header>
-                    <div class="card card-inverse card-primary mb-3 text-center">
+                    <div class="card card-inverse card-primary mb-3 text-center" ng-show="vm.student[0].HINDI">
   <div class="card-block">
     <blockquote class="card-blockquote">
       <p class="card-text violet">HINDI PROJECT</p>
-      <footer class="card-text">Someone famous in</footer>
+      <footer class="card-text">{{vm.student[0].HINDI}}</footer>
     </blockquote>
   </div>
 </div>
-<div class="card card-inverse card-success mb-3 text-center">
+<div class="card card-inverse card-success mb-3 text-center" ng-show="vm.student[0].ENGLISH">
   <div class="card-block">
     <blockquote class="card-blockquote">
       <p class="card-text indigo">ENGLISH PROJECT</p>
-      <footer class="card-text">Someone famous in</footer>
+      <footer class="card-text">{{vm.student[0].ENGLISH}}</footer>
     </blockquote>
   </div>
 </div>
-<div class="card card-inverse card-info mb-3 text-center">
+<div class="card card-inverse card-info mb-3 text-center" ng-show="vm.student[0].SCIENCE">
   <div class="card-block">
     <blockquote class="card-blockquote">
       <p class="card-text blue">SCIENCE PROJECT</p>
-      <footer class="card-text">Someone famous in </footer>
+      <footer class="card-text">{{vm.student[0].SCIENCE}}</footer>
     </blockquote>
   </div>
 </div>
-<div class="card card-inverse card-warning mb-3 text-center">
+<div class="card card-inverse card-warning mb-3 text-center" ng-show="vm.student[0].SOCIAL">
   <div class="card-block">
     <blockquote class="card-blockquote">
       <p class="card-text green">SOCIAL PROJECT</p>
-      <footer class="card-text">Someone famous in</footer>
+      <footer class="card-text">{{vm.student[0].SOCIAL}}</footer>
     </blockquote>
   </div>
 </div>
-<div class="card card-inverse card-danger text-center">
+<div class="card card-inverse card-danger text-center" ng-show="vm.student[0].GENERAL">
   <div class="card-block">
     <blockquote class="card-blockquote">
       <p class="card-text yellow">GENERAL PROJECT</p>
-      <footer class="card-text">Someone famous in</footer>
+      <footer class="card-text">{{vm.student[0].GENERAL}}</footer>
     </blockquote>
   </div>
 </div>
-<div class="card card-inverse card-success mb-3 text-center">
+<div class="card card-inverse card-success mb-3 text-center" ng-show="vm.student[0].TELUGU">
   <div class="card-block">
     <blockquote class="card-blockquote">
       <p class="card-text orange">TELUGU PROJECT</p>
-      <footer class="card-text">Someone famous in</footer>
+      <footer class="card-text">{{vm.student[0].TELUGU}}</footer>
     </blockquote>
   </div>
 </div>
-<div class="card card-inverse card-success mb-3 text-center">
+<div class="card card-inverse card-success mb-3 text-center" ng-show="vm.student[0].MATHEMATICS">
   <div class="card-block">
     <blockquote class="card-blockquote">
       <p class="card-text red">MATHEMATICS PROJECT</p>
-      <footer class="card-text">Someone famous in</footer>
+      <footer class="card-text">{{vm.student[0].MATHEMATICS}}</footer>
     </blockquote>
   </div>
 </div>
@@ -111,6 +111,4 @@
         </div>
             </div>
             <script src="app.js"></script>
-            <script src="lib/jszip.js"></script>
             <script src="lib/FileSaver.js"></script>
-            <script src="lib/jszip-utils.min.js"></script>
