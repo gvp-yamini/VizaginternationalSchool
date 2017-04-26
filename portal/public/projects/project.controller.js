@@ -10,16 +10,14 @@
         var vm = this;
 
         vm.student=null;
+		vm.subject = "";
+		vm.msgBody = "";
+		vm.search = "";
+		vm.searchById = searchById;
+		
 
-        initController();
-
-        function initController() {
-            alert("before call");
-            loadStudentdetails();
-        }
-
-        function loadStudentdetails() {
-            StudentService.GetById("142")
+        function searchById() {
+            StudentService.GetById(vm.search)
                 .then(function (student) {
                     vm.student = student;
                     alert(JSON.stringify(student));

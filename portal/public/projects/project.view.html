@@ -9,9 +9,9 @@
         <div class="row">    
         <div class="col-xs-8 col-xs-offset-2">
             <div class="input-group">        
-                <input type="text" class="form-control" name="x" placeholder="Enter Admission Number">
+                <input type="text" class="form-control" name="x" ng-model="vm.search" placeholder="Enter Admission Number">
                 <span class="input-group-btn">
-                    <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
+                    <button class="btn btn-default" type="button" ng-click="vm.searchById()"><span class="glyphicon glyphicon-search"></span></button>
                 </span>
             </div>
         </div>
