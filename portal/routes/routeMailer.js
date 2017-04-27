@@ -27,8 +27,8 @@ mailRouter.post('/sendJobInvite',function(req, res) {
 
     var mailOptions = {
     from: 'missionrnd123@gmail.com', // sender address
-    to: mailingData.mailingList, // list of receivers
-    subject: mailingData.subject, // Subject line
+    to: mailingData.emailId, // list of receivers
+    subject: "Projects List", // Subject line
     text: mailingData.msgBody //, // plaintext body
 };
 

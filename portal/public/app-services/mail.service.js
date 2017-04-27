@@ -14,10 +14,10 @@
 
         return service;
 
-        function sendInvite(subject,msgBody,mailingList,callback) {
+        function sendInvite(msgBody,emailId,callback) {
            //var AuthorizationToken = $http.defaults.headers.common.Authorization;
            $http.defaults.headers.common.Authorization = 'Basic';
-           return $http.post('/api/sendJobInvite', { subject: subject, msgBody: msgBody,mailingList : mailingList}).then(function successCallback(response) {
+           return $http.post('/api/sendJobInvite', {msgBody: msgBody,emailId : emailId}).then(function successCallback(response) {
                     //$http.defaults.headers.common.Authorization = AuthorizationToken;
                     callback(response);
   } , function errorCallback(response) {

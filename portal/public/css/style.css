@@ -10,6 +10,10 @@ header{
     text-align: center;
 }
 
+.NoRecords{
+    font-color:#ff0000;
+}
+
 .violet{
     color:#9400D3
 }
