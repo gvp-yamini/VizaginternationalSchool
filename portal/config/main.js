@@ -6,6 +6,6 @@ module.exports = {
         'port':'3306',
         'username':'root',
         'password':'root1234',
-        'databaseName': 'vizagSchool'
+        'databaseName': 'VizagInternationalSchool'
     }
 };
