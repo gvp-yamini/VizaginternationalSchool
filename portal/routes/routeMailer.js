@@ -29,7 +29,7 @@ mailRouter.post('/sendJobInvite',function(req, res) {
     from: 'vizaginternationalProjects@gmail.com', // sender address
     to: mailingData.emailId, // list of receivers
     subject: "Projects List", // Subject line
-    text: mailingData.msgBody //, // plaintext body
+    html: mailingData.msgBody //, // plaintext body
 };
 
 transporter.sendMail(mailOptions, function(error, info){

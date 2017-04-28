@@ -12,6 +12,7 @@ header{
 
 .NoRecords{
     color:#ff0000;
+    margin-left: 42%;
 }
 
 .violet{
@@ -157,7 +158,7 @@ label{
 
 .left-division{
     background-color: gold;
-    height: 600px;
+    height: 700px;
     position: absolute;
     width: 60%;
     left: 0;
@@ -219,7 +220,7 @@ label{
 .left-menu{
     float: left;
     left: 0;
-    height: 880px;
+    height: 940px;
     width: 17%;
     border-right: 1px solid lightgrey;
     background-color: white;
@@ -237,7 +238,7 @@ label{
 .right-menu{
     float: right;
     right: 0;
-    height: 880px;
+    height: 940px;
     width: 17%;
     border-right: 1px solid lightgrey;
     background-color: gold;

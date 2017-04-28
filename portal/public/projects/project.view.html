@@ -9,7 +9,7 @@
         <div class="row">    
         <div class="col-xs-8 col-xs-offset-2">
             <div class="input-group">        
-                <input type="text" class="form-control" name="x" ng-model="vm.search" placeholder="Enter Admission Number">
+                <input type="text" class="form-control" name="x" ng-model="vm.search" placeholder="Enter GR Number">
                 <span class="input-group-btn">
                     <button class="btn btn-default" type="button" ng-click="vm.searchById()"><span class="glyphicon glyphicon-search"></span></button>
                 </span>
@@ -33,7 +33,7 @@
           <pre>{{vm.msgBody}}</pre>
         </div>
         <div class="modal-footer">
-          <button type="button" ng-disabled="!vm.msgBody" class="btn btn-primary" data-dismiss="modal" ng-click="vm.sendmail()">Send</button>
+          <button type="button" ng-disabled="!vm.msgBody" class="btn btn-primary" data-dismiss="modal" ng-click="vm.sendInvite()">Send</button>
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
         </div>
       </div>
@@ -51,7 +51,7 @@
                     <div class="card card-inverse card-primary mb-3 text-center" ng-show="vm.student[0].HINDI">
   <div class="card-block">
     <blockquote class="card-blockquote">
-      <p class="card-text violet">HINDI PROJECT</p>
+      <p class="card-text orange">HINDI PROJECT</p>
       <footer class="card-text">{{vm.student[0].HINDI}}</footer>
     </blockquote>
   </div>
@@ -59,7 +59,7 @@
 <div class="card card-inverse card-success mb-3 text-center" ng-show="vm.student[0].ENGLISH">
   <div class="card-block">
     <blockquote class="card-blockquote">
-      <p class="card-text indigo">ENGLISH PROJECT</p>
+      <p class="card-text orange">ENGLISH PROJECT</p>
       <footer class="card-text">{{vm.student[0].ENGLISH}}</footer>
     </blockquote>
   </div>
@@ -67,7 +67,7 @@
 <div class="card card-inverse card-info mb-3 text-center" ng-show="vm.student[0].SCIENCE">
   <div class="card-block">
     <blockquote class="card-blockquote">
-      <p class="card-text blue">SCIENCE PROJECT</p>
+      <p class="card-text orange">SCIENCE PROJECT</p>
       <footer class="card-text">{{vm.student[0].SCIENCE}}</footer>
     </blockquote>
   </div>
@@ -75,7 +75,7 @@
 <div class="card card-inverse card-warning mb-3 text-center" ng-show="vm.student[0].SOCIAL">
   <div class="card-block">
     <blockquote class="card-blockquote">
-      <p class="card-text green">SOCIAL PROJECT</p>
+      <p class="card-text orange">SOCIAL PROJECT</p>
       <footer class="card-text">{{vm.student[0].SOCIAL}}</footer>
     </blockquote>
   </div>
@@ -83,7 +83,7 @@
 <div class="card card-inverse card-danger text-center" ng-show="vm.student[0].GENERAL">
   <div class="card-block">
     <blockquote class="card-blockquote">
-      <p class="card-text yellow">GENERAL PROJECT</p>
+      <p class="card-text orange">GENERAL PROJECT</p>
       <footer class="card-text">{{vm.student[0].GENERAL}}</footer>
     </blockquote>
   </div>
@@ -99,7 +99,7 @@
 <div class="card card-inverse card-success mb-3 text-center" ng-show="vm.student[0].MATHEMATICS">
   <div class="card-block">
     <blockquote class="card-blockquote">
-      <p class="card-text red">MATHEMATICS PROJECT</p>
+      <p class="card-text orange">MATHEMATICS PROJECT</p>
       <footer class="card-text">{{vm.student[0].MATHEMATICS}}</footer>
     </blockquote>
   </div>
