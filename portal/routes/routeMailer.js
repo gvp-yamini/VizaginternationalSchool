@@ -17,8 +17,8 @@ mailRouter.post('/sendJobInvite',function(req, res) {
         secure: false,
         port: 25,
         auth: {
-            user: 'missionrnd123@gmail.com', // Your email id
-            pass: 'missionrnd' // Your password
+            user: 'vizaginternationalProjects@gmail.com', // Your email id
+            pass: 'vizag@123' // Your password
         },
         tls: {
             rejectUnauthorized: false
@@ -26,7 +26,7 @@ mailRouter.post('/sendJobInvite',function(req, res) {
     });
 
     var mailOptions = {
-    from: 'missionrnd123@gmail.com', // sender address
+    from: 'vizaginternationalProjects@gmail.com', // sender address
     to: mailingData.emailId, // list of receivers
     subject: "Projects List", // Subject line
     text: mailingData.msgBody //, // plaintext body
