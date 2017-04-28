@@ -42,16 +42,19 @@ student.get('/', function (request, response) {
         db.getStudent(id,function(res){
             response.send(res);
         },function(err){
-            responseManager.setResponse(res,400,false,messages.GET_STUDENTS_FAILED);
+            responseManager.setResponse(err,400,false,messages.GET_STUDENTS_FAILED);
         });
     }
+},function(err){
+     console.log("yamini error callback");
+     responseManager.setResponse(err,400,false,messages.GET_STUDENTS_FAILED);
 });
 
 student.get('/', function (request, response) {
     db.getAllStudents(function (res) {
         response.send(res);
     }, function (err) {
-        responseManager.setResponse(res, 400, false, messages.GET_STUDENTS_FAILED);
+        responseManager.setResponse(err, 400, false, messages.GET_STUDENTS_FAILED);
     });
 });
 

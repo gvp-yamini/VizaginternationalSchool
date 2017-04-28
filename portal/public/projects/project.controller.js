@@ -16,13 +16,17 @@
 		vm.searchById = searchById;
         vm.downloadFile = downloadFile;
         vm.sendmail = sendmail;
+        vm.norecords = false;
 		
 
         function searchById() {
+            vm.norecords = true;
+            if(Number.isInteger(parseInt(vm.search))){
             StudentService.GetById(vm.search)
                 .then(function (student) {
                     vm.student = student;
-                    if(vm.student[0].HINDI || vm.student[0].ENGLISH || vm.student[0].SCIENCE || vm.student[0].SOCIAL || vm.student[0].GENERAL || vm.student[0].TELUGU || vm.student[0].MATHEMATICS){
+                    if(vm.student[0].HINDI || vm.student[0].ENGLISH || vm.student[0].SCIENCE || vm.student[0].SOCIAL || vm.student[0].GENERAL || vm.student[0].TELUGU || vm.student[0].MATHEMATICS || vm.student[0].NAME){
+                        vm.norecords = false;
                     vm.msgBody = "Your List of Projects: \n";
                     if(vm.student[0].HINDI){
                         vm.msgBody = vm.msgBody + "Hindi: "+vm.student[0].HINDI+"\n";
@@ -43,10 +47,15 @@
                         vm.msgBody = vm.msgBody + "Telugu: "+vm.student[0].TELUGU+"\n";
                     }
                      if(vm.student[0].MATHEMATICS){
-                        vm.msgBody = vm.msgBody + "Hindi: "+vm.student[0].MATHEMATICS+"\n";
+                        vm.msgBody = vm.msgBody + "Maths: "+vm.student[0].MATHEMATICS+"\n";
                     }
+                }else{
+                    vm.norecords = true;
                 }
                 });
+            }else{
+                 vm.norecords = true;
+            }
         }
     function downloadFile(){
         var blob = new Blob([vm.msgBody], {type: "text/plain;charset=utf-8"});

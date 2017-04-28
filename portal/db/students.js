@@ -39,6 +39,9 @@ db.getStudent = function (id,successCallback, failureCallback) {
             console.log("Could not retrieve student data");
             failureCallback('Could not retrieve student data');
         }
+    },function(err){
+            console.log("inside db error callback");
+            failureCallback('Could not retrieve student data');
     });
      }else{
           failureCallback('id is null,NaN or Undefined ');

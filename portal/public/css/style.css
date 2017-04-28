@@ -11,7 +11,7 @@ header{
 }
 
 .NoRecords{
-    font-color:#ff0000;
+    color:#ff0000;
 }
 
 .violet{
@@ -54,11 +54,18 @@ header{
 }
 
 .mrnd-logo{
-    background-image: url('../images/logo-black.png');
+    margin-bottom: 10px;
+    background-image: url('../images/vzg.jpg');
     background-size: contain;
     background-repeat: no-repeat;
-    width: 180px;
-    height: 50px;
+    width: 200px;
+    height: 70px;
+}
+
+.school-name{
+    color: #8B0000;
+    font-weight: 1000;
+    padding-top: 10px;
 }
 
 
@@ -428,36 +435,6 @@ a:hover, a:active { text-decoration: none; color:gold }
     margin-left: 50px;
 }
 
-header p {
-        color: #aaa;
-        position: relative;
-        margin: 0 0 1.6875em 0;
-    }
-
-    header h2 + p {
-        font-size: 1.25em;
-        margin-top: -0.5em;
-        line-height: 1.5em;
-    }
-
-    header h3 + p {
-        font-size: 1.1em;
-        margin-top: -0.35em;
-        line-height: 1.5em;
-    }
-
-    header h4 + p,
-    header h5 + p,
-    header h6 + p {
-        font-size: 0.9em;
-        margin-top: -0.25em;
-        line-height: 1.5em;
-    }
-
-    header.major h2 {
-        color: gold;
-        font-size: 3.5em;
-    }
 
         header.major h2 + p {
             color: #777;
@@ -489,148 +466,6 @@ header p {
         text-align: center;
         width: 23em;
         right: 0;
-    }
-
-        #header h1, #header h2, #header h3, #header h4, #header h5, #header h6 {
-            color: #ffffff;
-        }
-
-            #header h1 a, #header h2 a, #header h3 a, #header h4 a, #header h5 a, #header h6 a {
-                color: #ffffff;
-            }
-
-        #header header p {
-            color: #b6e9dc;
-        }
-
-        #header a {
-            color: #ffffff;
-        }
-
-            #header a:hover {
-                color: #ffffff !important;
-            }
-
-        #header > header {
-            -moz-flex-shrink: 0;
-            -webkit-flex-shrink: 0;
-            -ms-flex-shrink: 0;
-            flex-shrink: 0;
-            padding: 3em;
-        }
-
-            #header > header .avatar {
-                display: block;
-                margin: 0 auto 2.25em auto;
-                width: 8em;
-            }
-
-            #header > header h1 {
-                font-size: 1.75em;
-                margin: 0;
-            }
-
-            #header > header p {
-                color: #ffffff;
-                font-style: italic;
-                margin: 1em 0 0 0;
-            }
-
-        #header > footer {
-            -moz-flex-shrink: 0;
-            -webkit-flex-shrink: 0;
-            -ms-flex-shrink: 0;
-            flex-shrink: 0;
-            bottom: 0;
-            left: 0;
-            padding: 2em;
-            width: 100%;
-        }
-
-            #header > footer .icons {
-                margin: 0;
-            }
-
-                #header > footer .icons li a {
-                    color: #b6e9dc;
-                }
-
-        #header > nav {
-            -moz-flex-grow: 1;
-            -webkit-flex-grow: 1;
-            -ms-flex-grow: 1;
-            flex-grow: 1;
-        }
-
-            #header > nav ul {
-                list-style: none;
-                margin: 0;
-                padding: 0;
-            }
-
-                #header > nav ul li {
-                    border-top: 1px solid #ffffff;
-                    display: block;
-                    padding: 0;
-                }
-
-                    #header > nav ul li a {
-                        -moz-transition: none;
-                        -webkit-transition: none;
-                        -ms-transition: none;
-                        transition: none;
-                        border: 0;
-                        color: #ffffff !important;
-                        display: block;
-                        padding: 0.85em 0;
-                        text-decoration: none;
-                    }
-
-                        #header > nav ul li a.active {
-                            background: #fff;
-                            color: gold !important;
-                        }
-
-                    #header > nav ul li:first-child {
-                        border-top: 0;
-                    }
-
- .copyright{
-  position: absolute;
-  color: dimgrey;
-  background-color: #efefef;
-  text-align: center;
-  left: 0;
-  bottom:0;
-  padding: 1rem;
-  width: 100%;
-}
-
-/* Wrapper */
-
-            #wrapper {
-                -moz-backface-visibility: hidden;
-                -webkit-backface-visibility: hidden;
-                -ms-backface-visibility: hidden;
-                backface-visibility: hidden;
-                -moz-transition: -moz-transform 0.5s ease;
-                -webkit-transition: -webkit-transform 0.5s ease;
-                -ms-transition: -ms-transform 0.5s ease;
-                transition: transform 0.5s ease;
-                padding: 44px 0 1px 0;
-            }
-
-        /* One */
-
-            #one:before {
-                height: 10em;
-            }
-
-                h1, h2, h3, h4, h5, h6 {
-        color: #777;
-        font-weight: 700;
-        line-height: 1em;
-        margin: 0 0 0.5625em 0;
     }
 
     /* Section/Article */

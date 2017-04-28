@@ -12,10 +12,21 @@ var handler = (function(){
 	*/
 	function setResponse(response,statusCode,successFlag,message){
 		/*Set up the response*/
+		console.log("response-->"+response);
+		console.log("statusCode-->"+statusCode);
+		console.log("successFlag-->"+successFlag);
+		console.log("message-->"+message);
+		if(successFlag){
 		return response.status(statusCode).json({
 			success: successFlag, 
 			message: message
 		});
+	  }else{
+	  	return {
+	  		success: successFlag, 
+			message: message
+	  	}
+	  }
 	}
 
 	/**
