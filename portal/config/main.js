@@ -1,6 +1,6 @@
 'use strict';
 module.exports = {
-    'port': 8080,
+    'port': 8000,
     'database':{
         'host':'yaminidbinstance.ckr02bsctsrg.ap-south-1.rds.amazonaws.com',
         'port':'3306',
